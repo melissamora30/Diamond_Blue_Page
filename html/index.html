@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <script>
+        fetch('../html/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+
+    <section class="plaquita">
+        <img class="fotolateral" src="../recursos/placafondo.jpg" alt="">
+
+
+        <div class="plaquita-content container">
+
+            <h2> ¿Conocías la resina epóxica?</h2>
+            <p class="txt-p">
+                La resina epóxica es un material versátil y duradero que utilizamos en nuestras
+                artesanías para crear piezas únicas y hermosas. Combinando resina y endurecedor,
+                logramos acabados transparentes y brillantes que son resistentes al agua y al desgaste.
+            </p>
+        </div>
+    </section>
+
+    <section class="quienes_somos">
+        <div class="quienes_somos_content container">
+            <h2>¿Quiénes somos?</h2>
+            <img class="logocompleto" src="../recursos/logofoto-removebg-preview.png" alt="">
+            <p class="txt-p-quienes">
+                ¡Hola! Soy Melissa Mora, fundadora de Diamond Blue. Resido en Medellín y tengo una profunda pasión por
+                el
+                arte y la creatividad que me llevó a crear esta tienda virtual.
+
+                En Diamond Blue, ofrecemos una variedad de productos artesanales únicos, desde llaveros personalizados
+                hasta
+                decoraciones en resina, todos diseñados con amor y atención al detalle. Mi objetivo es brindar a cada
+                cliente una experiencia especial al adquirir piezas que reflejen su estilo y personalidad.
+
+                Te invito a explorar nuestra colección y descubrir el arte que podemos compartir contigo. Gracias por
+                ser
+                parte de esta aventura creativa.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="services">
+
+        <div class="general1">
+            <h2>Llavero personalizado</h2>
+            <p class="txt-p-service">
+                Nuestros llaveros personalizados son el complemento perfecto para llevar tus recuerdos y
+                estilo a donde vayas. Diseñados con atención al detalle, cada llavero es una obra única
+                que refleja tu personalidad.
+            </p>
+            <a href="products.html" class="btn_1">Información</a>
+        </div>
+        <div class="general2"></div>
+    </section>
+
+    <section class="services">
+        <div class="general3"></div>
+        <div class="general1">
+            <h2> Mostrador de uñas</h2>
+            <p class="txt-p-service">
+                Nuestros exhibidores de uñas son la solución perfecta para mostrar tu creatividad y estilo.
+                Diseñados con elegancia y funcionalidad, son ideales para salones de belleza, ferias y para uso
+                personal.
+            </p>
+            <a href="products.html" class="btn_1">Información</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="general1">
+            <h2>Placa de identificación de mascotas</h2>
+            <p class="txt-p-service">
+                Nuestras placas de identificación para mascotas son esenciales para garantizar la seguridad de tus
+                fieles compañeros. Diseñadas para ser funcionales y atractivas, cada placa es un accesorio único que
+                refleja la personalidad de tu mascota.
+            </p>
+            <a href="products.html" class="btn_1">Información</a>
+        </div>
+        <div class="general4"></div>
+    </section>
+
+    <section>
+
+        <section>
+
+            <main class="redes_sociales">
+
+                <div class="redes-content container">
+                    <h2>Síguenos en nuestras redes sociales</h2>
+
+                    <div class="redes_group">
+                        <ul>
+                            <li class="Instagram">
+                                <a target="_blank" href="https://www.instagram.com/diamondbluee30">
+                                    <img src="../recursos/instagram.png" alt="">
+                                    <h3>Instagram</h3>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li class="Facebook">
+                                <a target="_blank"
+                                    href="https://www.facebook.com/share/Pp3kXiGdkepMM59t/?mibextid=LQQJ4d ">
+                                    <img src="../recursos/facebook.png" alt="">
+                                    <h3>Facebook</h3>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li class="WhatsApp">
+                                <a target="_blank"
+                                    href="https://api.whatsapp.com/message/STB2LSS6WSARN1?autoload=1&app_absent=0 ">
+                                    <img src="../recursos/whatsapp.png" alt="">
+                                    <h3>WhatsApp</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section>
+
+
+                    <div id="footer-placeholder"></div>
+
+                    <script>
+                        fetch('../html/footer.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('footer-placeholder').innerHTML = data;
+                            });
+                    </script>
+                </section>
+
+</body>
+
+
+</html>
