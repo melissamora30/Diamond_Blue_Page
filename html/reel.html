@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel page</title>
+    <link rel="stylesheet" href="../css/reel_syle.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+            <script>
+                fetch('../html/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                    });
+            </script>
+
+    <h1 class="titulo-reel">Videos cortos</h1>
+
+
+    <div class="videos">
+        <div class="video-item">
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/t_NBbztSenw?playlist=t_NBbztSenw" title="Intensamente" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        
+        <div class="video-item">
+            <iframe src ="https://www.youtube.com/embed/adgfsD5NjWY" title="Llavero inteligente" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-item">
+            <iframe  src ="https://www.youtube.com/embed/TYZhk4wnlNw" title="Llavero Boo" allowfullscreen></iframe>
+        </div>
+        
+        <div class="video-item">
+            <iframe src ="https://www.youtube.com/embed/urI0dx7O6zo" title="Tecnica geoda" allowfullscreen></iframe>
+        </div>
+        
+        <div class="video-item">
+            <iframe   src ="https://www.youtube.com/embed/PSVfPldoRgs" title="Tecnica geoda" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-item">
+            <iframe src ="https://www.youtube.com/embed/aqCEXre413Y" title="llavero recuerdo" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-item">
+            <iframe src ="https://www.youtube.com/embed/KIUnyS_GtXI" title="lapiceros" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <section>
+        <div id="footer-placeholder"></div>
+
+        <script>
+            fetch('../html/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        </script>
+    </section>
+
+
+</body>
+</html>

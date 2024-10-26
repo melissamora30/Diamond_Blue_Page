@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto</title>
+    <link rel="stylesheet" href="../css/contact_style.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <script>
+        // Cargar el encabezado
+        fetch('../html/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar el encabezado');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error(error);
+                alert(error.message);
+            });
+    </script>
+
+    <h1 class="titulo-contact">Contáctanos</h1>
+
+    <form id="contactForm">
+        <input type="text" id="nombre" name="name" placeholder="Nombre Completo" required>
+        <input type="tel" id="celular" name="phone" placeholder="Celular" required>
+        <input type="email" id="correo" name="email" placeholder="Correo Electrónico" required>
+        <input type="text" id="ciudad" name="city" placeholder="Ciudad" required>
+        <textarea id="informacion" name="info" placeholder="Información Adicional" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    
+
+    <section>
+        <div id="footer-placeholder"></div>
+        <script>
+            // Cargar el pie de página
+            fetch('../html/footer.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al cargar el pie de página');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert(error.message);
+                });
+        </script>
+    </section>
+
+    <!-- <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch('http://localhost:3000/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert('Registro enviado con éxito');
+                    clearForm();
+                } else {
+                    const errorText = await response.text();
+                    alert('Error al enviar el registro: ' + errorText);
+                    clearForm();
+                }
+            } catch (error) {
+                alert('Error de conexión: ' + error.message);
+                clearForm();
+            }
+
+            function clearForm() {
+                document.getElementById('contactForm').reset(); // Limpiar todos los campos
+            }
+
+        }); -->
+    <!-- </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
